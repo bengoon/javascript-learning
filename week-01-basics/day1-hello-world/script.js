@@ -1,43 +1,57 @@
-// 계산기 함수들
-function add(a, b) {
-  return a + b;
+// greeting App
+console.log("=== Greeting script.js ===");
+
+// 1. 사용자 정보 입력
+const userName = prompt("이름을 입력하세요: ");
+const userAge = prompt("나이를 입력하세요: ");
+
+// 2. 입력값 검증
+if (userName && userAge) {
+  // 3. 환영 메시지 생성
+  const welcomeMessage = `안녕하세요, ${userName}님! ${userAge}살이시군요!`;
+
+  // 4. 콘솔에 출력
+  console.log(welcomeMessage);
+
+  // 5. 알림창에 출력
+  alert(welcomeMessage);
+
+  // 6. 추가 정보 출력
+  console.log(`입력한 이름: ${userName}`);
+  console.log(`입력한 나이는 ${userAge}`);
+  console.log(`이름 길이: ${userName.length}글자`);
+} else {
+  console.log("이름과 나이를 모두 입력해주세요!");
+  alert("입력이 취소되었습니다.");
 }
 
-function subtract(a, b) {
-  return a - b;
-}
+console.log("=== Greeting App 종료 ===");
 
-function multiply(a, b) {
-  return a * b;
-}
+// //1. 콘솔에 메시지 출력
+// console.log("JavaScript 파일이 연결되었습니다!");
 
-function divide(a, b) {
-  if (b === 0) {
-    return "0으로 나눌 수 없습니다!";
-  }
-  return a / b;
-}
+// //2. 변수 선언
+// const greeting = "안녕하세요";
+// let count = 0;
 
-// 버튼 클릭 시 실행되는 함수
-function calculate(operation) {
-  // 입력값 가져오기
-  const num1 = Number(document.getElementById("num1").value);
-  const num2 = Number(document.getElementById("num2").value);
+// console.log(greeting);
+// console.log("카운트: " + count);
 
-  // 결과 계산
-  let result;
-  if (operation === "add") {
-    result = add(num1, num2);
-  } else if (operation === "subtract") {
-    result = subtract(num1, num2);
-  } else if (operation === "multiply") {
-    result = multiply(num1, num2);
-  } else if (operation === "divide") {
-    result = divide(num1, num2);
-  }
+// //3. 함수 선언
+// function welcome(name) {
+//   return `${greeting}, ${name}!`;
+// }
 
-  // 결과 표시
-  document.getElementById("result").textContent = "결과: " + result;
-}
+// //4. 함수 실행
+// console.log(welcome("학습자"));
 
-console.log("계산기 준비 완료!");
+// //5. 간단한 계산
+// function calculate(a, b) {
+//   const sum = a + b;
+//   const product = a * b;
+
+//   console.log(`${a} + ${b} = ${sum}`);
+//   console.log(`${a} * ${b} = ${product}`);
+// }
+
+// calculate(5, 3);
