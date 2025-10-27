@@ -3,7 +3,7 @@ DOM = Document Object Model
 → HTML을 JavaScript가 이해할 수 있는 객체로 만든 것
 html<!-- HTML -->
 
-<h1 id="title">안녕하세요</h1>
+`<h1 id="title">안녕하세요</h1>`
 ↓ 브라우저가 변환 ↓
 javascript// JavaScript에서 이렇게 접근 가능!
 document.getElementById("title")
@@ -18,7 +18,7 @@ javascript// HTML에서 id="title"인 요소를 찾기
 const titleElement = document.getElementById("title");
 
 console.log(titleElement);
-// 결과: <h1 id="title">안녕하세요</h1>
+// 결과: `<h1 id="title">안녕하세요</h1>`
 핵심 포인트:
 
 document = 전체 HTML 문서
